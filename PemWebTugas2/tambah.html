@@ -1,0 +1,8 @@
+<?php
+require_once 'Peserta.php';
+
+if(isset($_POST['email']) && isset($_POST['nama'])){
+    $peserta = new Peserta($_POST['email'],$_POST['nama']);
+    $peserta->add();
+}
+
